@@ -1,0 +1,315 @@
+.agenda .loading {
+	text-align: center;
+}
+
+.agenda .loader {
+  position: relative;
+  width: 50%;
+  height: 4px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 64px;
+  background: #f7f7f7;
+}
+
+.agenda .loader:before{
+  display: block;
+  position: absolute;
+  content: '';
+  left: -50%;
+  width: 200px;
+  height: 4px;
+  background: #cccccc;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+
+.agenda .jumbotron {
+	padding: 30px;
+}
+
+.loading h4 {
+	font-size: 20px;
+}
+
+.agenda hr {
+	margin: 20px 0px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.agenda table {
+	margin: 0px;
+}
+
+.agenda .search-box {
+	margin-bottom: 20px;
+}
+
+.agenda .alert {
+	margin-bottom: 15px;
+}
+
+.agenda .ctt-detail dt {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-bottom: 10px;
+}
+
+.agenda .ctt-detail .icon {
+	margin-right: 5px;
+}
+
+.ui-accordion-container {
+	display: block;
+	margin-bottom: 30px;
+}
+
+.ui-accordion {
+	display: block;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	border: 1px dashed #cccccc;
+}
+
+.ui-accordion .ui-accordion-title {
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	line-height: 20px;
+	padding: 10px 15px;
+	background: #fafafa;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding: 15px;
+	border-top: 1px solid #efefef;
+}
+
+.content-wrap {
+	padding: 45px 0px;
+}
+
+.ui-alert {
+	color: #a94442;
+	margin-bottom: 30px;
+	padding: 15px 30px;
+	border-radius: 5px;
+	border: 1px solid #ebccd1;
+	background-color: #f2dede;
+}
+
+.ui-alert .ui-alert-title {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0px 0px 5px 20px;
+}
+
+.ui-alert .ui-alert-message {
+	font-size: 14px;
+	margin: 0px 0px 0px 20px;
+}
+
+.ui-alert-icon {
+	float: left;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.table-container {
+	overflow-x: auto;
+}
+
+.btn-block {
+	padding-top: 10px;
+}
+
+.btn-responsive {
+	display: inline-block;
+	width: auto;
+	margin-right: 5px;
+}
+
+.btn-responsive:last-child {
+	margin-right: 0px;
+}
+
+.master-title {
+	font-size: 26px;
+	line-height: 24px;
+	margin: 0px 0px 30px 0px;
+}
+
+.leading-title {
+	font-size: 20px;
+	line-height: 18px;
+	margin: 0px 0px 20px 0px;
+}
+
+.contact {
+	border: none;
+	box-shadow: 0px 0px 0px 0px;
+}
+
+.contact,
+.contact .contact-list, 
+.contact .contact-list li {
+	background: none;
+}
+
+.contact .panel-heading {
+	padding: 10px 15px 10px 0px;
+	border-bottom: 1px solid #cccccc;
+	background: none !important;
+}
+
+.panel .sorting {
+	display: block;
+	font-size: 14px;
+	color: #333333;
+	text-decoration: none;
+	background: #efefef;
+}
+
+.panel .sorting span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.panel .sorting .icon {
+	float: right;
+	display: inline;
+}
+
+.panel .sorting .icon:before {
+	display: inline-block;
+	line-height: 16px;
+	vertical-align: middle;
+}
+
+.contact-list input[type="checkbox"] {
+	vertical-align: middle;
+	margin: 0px 3px 0px 0px;
+}
+
+.contact-list li {
+	margin: 0px 0px 0px 10px;
+	padding: 10px 10px 10px 0px;
+	border-top: none;
+	border-bottom: 1px solid #dddddd;
+}
+
+.contact-list li a {
+	display: inline-block;
+	color: #333333;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.error-list {
+	margin: 0px;
+	padding: 0px;
+	list-style-position: inside;
+}
+
+.inner-addon {
+	position: relative;
+}
+
+.inner-addon.left-addon .glyphicon {
+	top: 0px;
+	left: 0px;
+}
+
+.inner-addon.right-addon .glyphicon {
+	top: 0px;
+	right: 0px;
+}
+
+.inner-addon.left-addon input {
+	padding-left: 30px;
+}
+
+.inner-addon.right-addon input {
+	padding-right: 30px;
+}
+
+.inner-addon .glyphicon {
+	position: absolute;
+	padding: 10px;
+	pointer-events: none;
+}
+
+.btn-icon {
+	float: none;
+	display: inline-block;
+	line-height: normal;
+	margin-right: 5px;
+}
+
+.thin {
+	font-weight: 200;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.selected {
+	background: #f7f7f7 !important;
+}
+
+.no-margin {
+	margin: 0px !important;
+}
+
+@media screen and (min-width:240px) and (max-width:768px) {
+	.agenda .jumbotron {
+		padding: 15px;
+	}
+	
+	.content-wrap {
+		padding: 30px 0px;
+	}
+
+	.ui-alert {
+		padding: 15px;
+	}
+
+	.table-container {
+		overflow-x: scroll;
+	}
+	
+	.agenda .table > tbody > tr > td, 
+	.agenda .table > tbody > tr > th, 
+	.agenda .table > tfoot > tr > td, 
+	.agenda .table > tfoot > tr > th, 
+	.agenda .table > thead > tr > td, 
+	.agenda .table > thead > tr > th {
+		padding: 5px;
+	}
+	
+	.btn-icon {
+		float: left;
+		line-height: 18px;
+	}
+
+	.btn-responsive {
+		width: 100%;
+		margin: 0px 0px 5px 0px;
+	}
+
+	.btn-responsive:last-child {
+		margin: 0px;
+	}
+}

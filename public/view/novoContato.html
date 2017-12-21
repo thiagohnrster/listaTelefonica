@@ -1,0 +1,46 @@
+<div class="agenda content-wrap">
+    <form name="novoContatoForm">
+        <div class="jumbotron">
+            <div ng-show="novoContatoForm.tfNome.$invalid && novoContatoForm.tfNome.$dirty || novoContatoForm.tfAddress.$invalid && novoContatoForm.tfAddress.$dirty || novoContatoForm.tfTelefone.$invalid && novoContatoForm.tfTelefone.$dirty" class="alert alert-danger">
+                <ul class="error-list">
+                    <li ng-messages="novoContatoForm.tfNome.$error" ng-show="novoContatoForm.tfNome.$invalid && novoContatoForm.tfNome.$dirty">
+                        <span ng-message="required">Preencha o nome.</span>
+                        <span ng-message="minlength">O campo nome deve conter no mínimo 5 caracteres.</span>
+                    </li>
+                    <li ng-messages="novoContatoForm.tfAddress.$error" ng-show="novoContatoForm.tfAddress.$invalid && novoContatoForm.tfAddress.$dirty">
+                        <span ng-message="required">Preencha o endereço.</span>
+                        <span ng-message="minlength">O campo endereço deve conter no mínimo 10 caracteres.</span>
+                    </li>
+                    <li ng-messages="novoContatoForm.tfTelefone.$error" ng-show="novoContatoForm.tfTelefone.$invalid && novoContatoForm.tfTelefone.$dirty">
+                        <span ng-message="required">Preencha o telefone.</span>
+                        <span ng-message="pattern">Não é um telefone válido.</span>
+                    </li>
+                </ul>
+            </div>
+            <h4 class="leading-title">{{app}}</h4>
+            <fieldset>
+                <div class="row clearfix">
+                    <div id="ctrlNome" class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label for="inputName" class="control-label">Nome</label>
+                        <input type="text" maxlength="100" ng-model="contato.name" ng-minlength="5" ng-required="true" name="tfNome" id="inputNome" placeholder="" class="form-control" />
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div id="ctrlAddress" class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <label for="inputAddress" class="control-label">Endereço</label>
+                        <input type="text" maxlength="100" ng-model="contato.address" ng-minlength="10" ng-required="true" name="tfAddress" id="inputAddress" placeholder="" class="form-control" />
+                    </div>
+                    <div id="ctrlTelefone" class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <label for="inputPhone" class="control-label">Telefone</label>
+                        <input type="text" maxlength="15" ng-model="contato.telefone" ng-pattern="/^\([1-9]{2}\) [6-9][0-9]{3,4}\-[0-9]{4}$/" ng-required="true" name="tfTelefone" id="inputTelefone" placeholder="" class="form-control" ui-phone />
+                    </div>
+                </div>
+            </fieldset>
+            <div class="btn-block clearfix">
+                <button type="button" ng-click="adicionarContato(contato)" ng-disabled="novoContatoForm.$invalid" class="btn btn-primary btn-responsive">
+                    <i class="btn-icon glyphicon glyphicon-plus"></i> Adicionar Contato
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
