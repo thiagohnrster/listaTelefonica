@@ -2,26 +2,28 @@
     <div class="jumbotron">
         <h4 class="leading-title">{{app}}</h4>
         <form name="contatosForm">
-            <div id="ctrlCampoBusca" class="search-box form-group inner-addon right-addon">
-                <input type="text" ng-model="busca" name="tfBusca" id="inputBusca" placeholder="Buscar" class="form-control" />
-                <span class="glyphicon glyphicon-search"></span>
-            </div>
-            <ui-alert ng-show="error"></ui-alert>
-            <div ng-show="contatos.length > 0" class="contact panel panel-default">
-				<div ng-click="toggleClass()">
-					<a href="javascript:;" ng-click="sortBy('name')" class="panel-heading sorting bold">
-						<span>Classificar por nome <i class="icon glyphicon glyphicon-triangle-top"></i></span>
-					</a>
-				</div>
-				<ul class="contact-list list-group">
-					<li ng-class="{'bold': contato.selected}" ng-repeat="contato in contatos | filter: {name: busca} | orderBy:sortingStandards:sortingDirection" class="list-group-item">
-						<input type="checkbox" ng-class="" ng-model="contato.selected" />
-						<a href="#/detalhesContato/{{contato.id}}">{{contato.name | name | ellipsis:20}}</a>
-					</li>
-				</ul>
-			</div>
+            <fieldset>
+                <div id="ctrlCampoBusca" class="search-box form-group inner-addon right-addon">
+                    <input type="text" ng-model="busca" name="tfBusca" id="inputBusca" placeholder="Buscar" class="form-control" />
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+                <ui-alert ng-show="error"></ui-alert>
+                <div ng-show="contatos.length > 0" class="contact panel panel-default">
+    				<div ng-click="toggleClass()">
+    					<a href="javascript:;" ng-click="sortBy('name')" class="panel-heading sorting bold">
+    						<span>Classificar por nome <i class="icon glyphicon glyphicon-triangle-top"></i></span>
+    					</a>
+    				</div>
+    				<ul class="contact-list list-group">
+    					<li ng-class="{'bold': contato.selected}" ng-repeat="contato in contatos | filter: {name: busca} | orderBy:sortingStandards:sortingDirection" class="list-group-item">
+    						<input type="checkbox" ng-class="" ng-model="contato.selected" />
+    						<a href="#/detalhesContato/{{contato.id}}">{{contato.name | name | ellipsis:20}}</a>
+    					</li>
+    				</ul>
+    			</div>
+            </fieldset>
             <hr />
-            <div class="clearfix">
+            <div class="btn-block clearfix">
                 <a href="#/novoContato" class="btn btn-primary btn-responsive"><i class="btn-icon glyphicon glyphicon-user"></i> Novo Contato</a>
                 <button type="button" ng-click="apagarContatos(contatos)" ng-if="isContatoSelecionado(contatos)" class="btn btn-danger btn-responsive">
                     <i class="btn-icon glyphicon glyphicon-remove"></i> Apagar Contato
