@@ -17,7 +17,7 @@
                     </li>
                 </ul>
             </div>
-            <h4 class="leading-title">{{app}}</h4>
+            <h4 class="leading-title bold">{{app}}</h4>
             <fieldset>
                 <div class="row clearfix">
                     <div id="ctrlNome" class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -38,6 +38,7 @@
             </fieldset>
             <hr />
             <div class="btn-block clearfix">
+                <a href="#/contatos" class="btn btn-danger btn-responsive"><i class="btn-icon glyphicon glyphicon-chevron-left"></i> Voltar</a>    
                 <button type="button" ng-click="adicionarContato(contato)" ng-disabled="novoContatoForm.$invalid" class="btn btn-primary btn-responsive">
                     <i class="btn-icon glyphicon glyphicon-plus"></i> Adicionar Contato
                 </button>

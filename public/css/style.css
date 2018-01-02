@@ -43,7 +43,7 @@
 .agenda hr {
 	margin: 20px 0px;
 	border: none;
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 1px solid #dddddd;
 }
 
 .agenda table {
@@ -83,7 +83,7 @@
 	overflow: hidden;
 	border-radius: 4px;
 	margin-bottom: 5px;
-	border: 1px dashed #cccccc;
+	border: 1px dashed #dddddd;
 }
 
 .ui-accordion .ui-accordion-title {
@@ -155,8 +155,8 @@
 }
 
 .leading-title {
-	font-size: 20px;
-	line-height: 18px;
+	font-size: 32px;
+	line-height: 32px;
 	margin: 0px 0px 20px 0px;
 }
 
@@ -174,7 +174,7 @@
 
 .contact .panel-heading {
 	padding: 10px 15px 10px 0px;
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 1px solid #dddddd;
 	background: none !important;
 }
 
